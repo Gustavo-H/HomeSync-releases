@@ -1,34 +1,44 @@
 # HomeSync-releases
 
-Versões publicadas do HomeSync para instalar e atualizar. O código fica nos repositórios privados
-(`HomeSync-desktop`, `HomeSync-app`, `HomeSync-server`); aqui ficam só os instaladores e as
-informações que os apps consultam para saber se há versão nova.
+Versões publicadas do HomeSync. Os arquivos para baixar ficam na aba
+**[Releases](https://github.com/Gustavo-H/HomeSync-releases/releases)**, um release por versão; o
+código fica nos repositórios privados (`HomeSync-desktop`, `HomeSync-app`, `HomeSync-server`).
 
-| Pasta | Plataforma | Tags dos releases | Como atualiza |
+## Baixar
+
+| Plataforma | Releases | Arquivo para instalar |
+|---|---|---|
+| **Windows** (HomeSync Desktop) | [Versões do desktop](https://github.com/Gustavo-H/HomeSync-releases/releases?q=desktop-v&expanded=true) | `HomeSync-win-Setup.exe` (ou `HomeSync-win-Portable.zip`, sem instalar) |
+| **Android** (app HomeSync) | [Versões do Android](https://github.com/Gustavo-H/HomeSync-releases/releases?q=android-v&expanded=true) | `HomeSync-X.Y.Z.apk` |
+
+Use sempre o release mais recente da plataforma. O que mudou em cada versão está no
+[CHANGELOG.md](CHANGELOG.md) e na descrição de cada release.
+
+**Windows:** sem certificado de assinatura de código, o Windows mostra "O Windows protegeu o
+computador" na instalação: clique em **Mais informações** > **Executar assim mesmo**. O app é
+instalado só para o usuário (`%LocalAppData%\HomeSync`), sem pedir administrador.
+
+## Como as versões ficam separadas
+
+Cada release tem uma tag com o prefixo da plataforma, e é por ele que os apps acham as suas versões:
+
+| Plataforma | Tag | Arquivos do release | Como o app atualiza |
 |---|---|---|---|
-| [`desktop/`](desktop/) | Windows (HomeSync Desktop) | `desktop-v1.2.3` | Automática (Velopack): baixa sozinho e aplica ao reiniciar |
-| [`android/`](android/) | Android (app HomeSync) | `android-v1.2.3` | O app avisa, baixa o APK e o Android pede para confirmar |
+| Windows | `desktop-v1.2.3` | `HomeSync-win-Setup.exe`, `HomeSync-win-Portable.zip`, `HomeSync-1.2.3-full.nupkg`, `HomeSync-1.2.3-delta.nupkg`, `releases.win.json`, `RELEASES` | Em **Configurações > Atualizações**, o app procura os releases com o `releases.win.json`, baixa a versão nova (só a diferença, quando possível) e reinicia ([Velopack](https://velopack.io)) |
+| Android | `android-v1.2.3` | `HomeSync-1.2.3.apk` | O app procura o release `android-v` mais recente, compara com a versão instalada, baixa o APK (conferindo o hash que o GitHub informa) e o Android pede para confirmar a instalação |
 
 O servidor (`HomeSync-server`) não é distribuído por aqui: ele é atualizado na máquina onde roda.
 
-## Onde ficam os arquivos
+## Regras para publicar
 
-- **Instaladores e pacotes** (`.exe`, `.nupkg`, `.apk`): anexados aos **Releases** do GitHub, um
-  release por versão. O GitHub aceita anexos grandes ali, ao contrário dos arquivos do repositório.
-- **Nas pastas do repositório**: só texto pequeno, ou seja, as notas de versão (`CHANGELOG.md`) e,
-  no Android, o `latest.json` que o app lê para saber a versão mais recente.
-
-O `.gitignore` impede que binários sejam enviados para o repositório por engano.
-
-## Regras
-
-1. **Uma tag por versão, com o prefixo da plataforma**: `desktop-v1.4.0`, `android-v1.4.0`. O
-   prefixo é o que separa as duas plataformas nos Releases.
-2. **A versão só aumenta.** Cada plataforma segue a própria numeração (`MAJOR.MINOR.PATCH`). Uma
-   versão publicada nunca é reaproveitada.
-3. **Não apague releases publicados**: os apps instalados podem precisar deles (o desktop usa os
-   pacotes anteriores para baixar só a diferença).
-4. **Versão com problema se corrige publicando outra**, maior. Não há volta automática.
-5. **Releases do desktop são gerados pelo script de publicação** do `HomeSync-desktop`, nunca à
-   mão: os arquivos do Velopack precisam estar completos e consistentes.
-6. O repositório é **público**: nada de senhas, tokens ou dados de usuários aqui.
+1. **Uma tag por versão, com o prefixo da plataforma** (`desktop-v1.4.0`, `android-v1.4.0`). Cada
+   plataforma segue a própria numeração (`MAJOR.MINOR.PATCH`), que só aumenta.
+2. **Windows:** publique sempre pelo script do `HomeSync-desktop`
+   (`scripts\publish-release.ps1`), nunca à mão: os arquivos do Velopack precisam estar completos.
+3. **Android:** o APK é assinado sempre com a **mesma chave**; com outra, o Android recusa a
+   atualização.
+4. **Não apague releases publicados que funcionam:** o desktop usa o pacote anterior para baixar só
+   a diferença. Uma versão com problema se corrige publicando outra, maior.
+5. Registre cada versão no [CHANGELOG.md](CHANGELOG.md).
+6. O repositório é **público**: nada de senhas, tokens ou dados de usuários aqui. O `.gitignore`
+   impede que instaladores sejam enviados para o código por engano (eles vão nos Releases).
