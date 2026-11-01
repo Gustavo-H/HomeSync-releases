@@ -1,0 +1,8 @@
+# Installers and packages go to GitHub Releases as assets, never into the repository.
+*.exe
+*.msi
+*.nupkg
+*.zip
+*.apk
+*.aab
+releases/
