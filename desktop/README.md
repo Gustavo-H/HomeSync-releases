@@ -20,15 +20,18 @@ Gerado e enviado pelo script de publicação do `HomeSync-desktop` (`vpk pack` +
 | Arquivo | Para quê |
 |---|---|
 | `HomeSync-win-Setup.exe` | Primeira instalação |
+| `HomeSync-win-Portable.zip` | Versão portátil: roda de uma pasta, sem instalar |
 | `HomeSync-X.Y.Z-full.nupkg` | O app completo (instalações que não podem usar o delta) |
 | `HomeSync-X.Y.Z-delta.nupkg` | Só o que mudou desde a versão anterior (download pequeno) |
 | `releases.win.json` | Lista de versões que o app consulta |
-| `assets.win.json`, `RELEASES` | Arquivos auxiliares do Velopack |
+| `RELEASES` | Arquivo auxiliar do Velopack |
 
 ## Como o app encontra a versão nova
 
-O app lê os Releases deste repositório e considera **apenas as tags `desktop-v…`**; os releases do
-Android são ignorados. (O leitor padrão do Velopack só olha os 10 releases mais recentes, então o
-desktop filtra pelo prefixo para não perder versões quando houver vários releases do Android.)
+A verificação é feita só quando o usuário clica em **Configurações > Atualizações > Verificar
+atualizações**. O app lê até 100 releases deste repositório e considera apenas os que têm o
+`releases.win.json`, ou seja, os do desktop; os do Android são ignorados. (O leitor padrão do
+Velopack só olha os 10 releases mais recentes, o que perderia versões do desktop atrás de vários
+releases do Android.)
 
 Notas de cada versão: [CHANGELOG.md](CHANGELOG.md).
