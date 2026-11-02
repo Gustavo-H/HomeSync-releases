@@ -12,6 +12,15 @@ Mais recente primeiro, separado por plataforma. Cada versão corresponde a um re
 
 ## Windows (HomeSync Desktop)
 
+### 1.0.2 — 01/11/2026
+
+- Filtro por dia e trilha clicável dos filtros aplicados (tela > tipo > ano > mês > dia).
+- Painel de detalhes com largura ajustável (arrastando a borda), botão "Ampliar" e vídeos
+  tocando no próprio painel.
+- Selecionar arrastando mostra as marcações de seleção.
+- Tela Servidor: card para pedir a atualização do servidor.
+- Requer o HomeSync-server com o filtro por dia (dev de 01/11/2026).
+
 ### 1.0.1 — 01/11/2026
 
 - Corrige a versão instalada que fechava ao abrir (faltavam os arquivos da interface no pacote).
