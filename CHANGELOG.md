@@ -12,6 +12,18 @@ Mais recente primeiro, separado por plataforma. Cada versão corresponde a um re
 
 ## Windows (HomeSync Desktop)
 
+### 1.0.3 — 03/11/2026
+
+- Tela Servidor: card **Temperaturas**, ao vivo, com o processador, o gabinete e os HDs (dados,
+  sistema e backup), cada um com um indicador verde, amarelo ou vermelho.
+- Atualização do servidor acompanhada até o fim: fila, reconstrução e servidor reiniciando, e no
+  final o resultado (atualizado, voltou para a versão anterior ou falhou), com "Ver registro". Ao
+  abrir a tela, aparece o resultado da última atualização.
+- Tela Servidor mostra a versão da API.
+- Temperaturas e acompanhamento da atualização: HomeSync-server de 02/11/2026 ou mais novo, com o
+  atualizador instalado (`deploy/install-updater.sh`). Versão da API e HD do sistema: HomeSync-server
+  1.0.1. Com um servidor mais antigo, o card avisa para atualizá-lo.
+
 ### 1.0.2 — 01/11/2026
 
 - Filtro por dia e trilha clicável dos filtros aplicados (tela > tipo > ano > mês > dia).
