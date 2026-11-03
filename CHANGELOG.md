@@ -58,4 +58,17 @@ Primeira versão instalável. **Não abre depois de instalada; use a 1.0.1.**
 
 ## Android (app HomeSync)
 
-Nenhuma versão publicada ainda.
+### 1.0.2 — 03/11/2026
+
+- Sai o menu **Preferências**: as mídias baixadas voltam sempre para o álbum de origem e, quando o
+  Android não deixa gravar nele (como nas pastas do WhatsApp), vão para o álbum
+  "HomeSync - <pasta de origem>" em Pictures, reaproveitado nos próximos downloads.
+- A opção "Álbum HomeSync" (tudo num álbum só) deixou de existir.
+
+### 1.0.1 — 02/11/2026
+
+Primeira versão publicada. Instale baixando o APK pelo celular; as próximas chegam por
+**Configurações > Atualizações**.
+
+- Card **Atualizações** em Configurações: verifica só quando tocado, baixa o APK, confere o
+  SHA-256 e abre o instalador do Android.
