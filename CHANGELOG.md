@@ -12,6 +12,12 @@ Mais recente primeiro, separado por plataforma. Cada versão corresponde a um re
 
 ## Windows (HomeSync Desktop)
 
+### 1.0.5 — 05/11/2026
+
+- Ao clicar num item, aparece o botão **Selecionar**, que entra no modo de seleção (o item
+  clicado já vem marcado); no modo de seleção, o mesmo botão vira **Cancelar seleção**.
+- Vale nas telas de fotos, vídeos, favoritos, álbuns e na Lixeira.
+
 ### 1.0.4 — 03/11/2026
 
 - Tela Servidor mostra a versão da API.
