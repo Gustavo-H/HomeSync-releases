@@ -12,6 +12,12 @@ Mais recente primeiro, separado por plataforma. Cada versão corresponde a um re
 
 ## Windows (HomeSync Desktop)
 
+### 1.0.8 — 08/11/2026
+
+- Visualizador: botão **Girar** (ou tecla R) gira a foto um quarto de volta. O giro fica salvo
+  no servidor, vale para a miniatura e para o app, e o arquivo original não é alterado.
+- Requer o HomeSync-server 1.0.2.
+
 ### 1.0.7 — 08/11/2026
 
 - A janela de visualização de mídias fica sempre maximizada: saem os botões de minimizar e
