@@ -12,6 +12,11 @@ Mais recente primeiro, separado por plataforma. Cada versão corresponde a um re
 
 ## Windows (HomeSync Desktop)
 
+### 1.0.7 — 08/11/2026
+
+- A janela de visualização de mídias fica sempre maximizada: saem os botões de minimizar e
+  restaurar.
+
 ### 1.0.6 — 07/11/2026
 
 - Configurações: card **Sobre**, com o desenvolvedor e as licenças de código aberto dos
