@@ -12,6 +12,16 @@ Mais recente primeiro, separado por plataforma. Cada versão corresponde a um re
 
 ## Windows (HomeSync Desktop)
 
+### 1.0.9 — 08/11/2026
+
+- Ao fechar o visualizador, a lista volta para a mídia que estava aberta e a deixa selecionada.
+- Ao abrir ou fechar o painel de detalhes (ou mudar a largura dele), a lista rola até o item
+  selecionado, em vez de deixá-lo fora de vista.
+- **Girar** grava a nova orientação no próprio arquivo, sem perda de qualidade, em JPEG, PNG,
+  GIF, BMP, TIFF e WebP sem perda: a foto baixada, copiada ou impressa já sai girada. Em HEIC e
+  outros formatos, o giro continua valendo só dentro do HomeSync.
+- Requer o HomeSync-server 1.0.3.
+
 ### 1.0.8 — 08/11/2026
 
 - Visualizador: botão **Girar** (ou tecla R) gira a foto um quarto de volta. O giro fica salvo
