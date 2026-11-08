@@ -12,6 +12,11 @@ Mais recente primeiro, separado por plataforma. Cada versão corresponde a um re
 
 ## Windows (HomeSync Desktop)
 
+### 1.0.6 — 07/11/2026
+
+- Configurações: card **Sobre**, com o desenvolvedor e as licenças de código aberto dos
+  componentes usados.
+
 ### 1.0.5 — 05/11/2026
 
 - Ao clicar num item, aparece o botão **Selecionar**, que entra no modo de seleção (o item
@@ -63,6 +68,12 @@ Primeira versão instalável. **Não abre depois de instalada; use a 1.0.1.**
 - Requer o HomeSync-server com álbuns e exclusão automática da lixeira (dev de 01/11/2026).
 
 ## Android (app HomeSync)
+
+### 1.0.3 — 07/11/2026
+
+- Configurações: **Sobre o HomeSync**, com a versão, o desenvolvedor e as licenças de código
+  aberto das bibliotecas usadas.
+- O card **Atualizações** mostra só o número da versão.
 
 ### 1.0.2 — 03/11/2026
 
